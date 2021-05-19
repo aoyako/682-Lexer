@@ -1,0 +1,6 @@
+digraph init {
+    2 [peripheries=2]
+
+    0 -> equals [label="="]
+    0 -> 2 [label="$$e"]
+}

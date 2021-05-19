@@ -1,0 +1,7 @@
+digraph string_constant_1 {
+    3 [peripheries=2]
+    0 -> 3 [label="$[\']"]
+    0 -> 6 [label="\\"]
+    6 -> 0 [label="$[^\']"]
+    0 -> 0 [label="$[^\']"]
+}

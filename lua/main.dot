@@ -1,0 +1,60 @@
+digraph main {
+    2 [peripheries=2]
+
+    0 -> string_constant_2 [label="$[\"]"]
+    0 -> string_constant_1 [label="$[\']"]
+    0 -> number_constant [label="$\d"]
+    0 -> init [label="$\="]
+    0 -> identifier [label="$[[:alpha:]]"]
+
+    0 -> 1 [label="$\s"]
+    1 -> 1 [label="$\s"]
+    1 -> 2 [label="$$e"]
+
+    0 -> 3 [label="("]
+    3 -> 2 [label="$$e"]
+    0 -> 4 [label=")"]
+    4 -> 2 [label="$$e"]
+
+    0 -> 5 [label="["]
+    5 -> 2 [label="$$e"]
+    0 -> 6 [label="]"]
+    6 -> 2 [label="$$e"]
+
+    0 -> 7 [label="{"]
+    7 -> 2 [label="$$e"]
+    0 -> 8 [label="}"]
+    8 -> 2 [label="$$e"]
+
+    0 -> 9 [label=":"]
+    9 -> 2 [label="$$e"]
+
+    0 -> 10 [label="."]
+    10 -> 18 [label="."]
+    18 -> 19 [label="."]
+    10 -> 2 [label="$$e"]
+    18 -> 2 [label="$$e"]
+    19 -> 2 [label="$$e"]
+
+    0 -> 11 [label=","]
+    11 -> 2 [label="$$e"]
+
+    0 -> 12 [label=";"]
+    12 -> 2 [label="$$e"]
+
+    0 -> 13 [label="+"]
+    13 -> 2 [label="$$e"]
+
+    0 -> 14 [label="-"]
+    14 -> 2 [label="$$e"]
+    14 -> commentary [label="-"]
+
+    0 -> 15 [label="*"]
+    15 -> 2 [label="$$e"]
+
+    0 -> 16 [label="/"]
+    16 -> 2 [label="$$e"]
+
+    0 -> 17 [label="%"]
+    17 -> 2 [label="$$e"]
+}

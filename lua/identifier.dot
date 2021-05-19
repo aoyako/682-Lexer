@@ -1,0 +1,6 @@
+digraph main {
+    1 [peripheries=2]
+
+    0 -> 0 [label="$[[:alnum:]\_]"]
+    0 -> 1 [label="$$e"]
+}
