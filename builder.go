@@ -15,7 +15,7 @@ const (
 )
 
 var (
-	connectionRegex  = regexp.MustCompile(`[0-9]+->[[:alnum:]\_]+\[label="[[:alpha:]\d\\$\\=\\^\]\[\_\'\"\:\-\(\)\{\}\.\;\,\+\-\*\/\%]+"\]`)
+	connectionRegex  = regexp.MustCompile(`[0-9]+->[[:alnum:]\_]+\[label="[[:alpha:]\d\\$\\=\\^\]\[\_\'\"\:\-\(\)\{\}\.\;\,\+\-\*\/\%\@\#]+"\]`)
 	declarationRegex = regexp.MustCompile(`[0-9]+\[peripheries=[0-9]\]`)
 )
 

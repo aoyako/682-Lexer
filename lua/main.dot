@@ -3,9 +3,10 @@ digraph main {
 
     0 -> string_constant_2 [label="$[\"]"]
     0 -> string_constant_1 [label="$[\']"]
-    0 -> number_constant [label="$\d"]
+    0 -> number_constant [label="$[1-9]"]
+    0 -> hex_number_constant [label="0"]
     0 -> init [label="$\="]
-    0 -> identifier [label="$[[:alpha:]]"]
+    0 -> identifier [label="$[[:alpha:]\#\@\_]"]
 
     0 -> 1 [label="$\s"]
     1 -> 1 [label="$\s"]

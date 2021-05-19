@@ -1,0 +1,15 @@
+digraph hex_number_constant {
+    3 [peripheries=2]
+    2 [peripheries=3]
+
+    0 -> 1 [label="x"]
+    0 -> number_constant [label="$[\d]"]
+    0 -> number_constant [label="$$e"]
+
+    1 -> 1 [label="$[a-fA-F\d]"]
+    1 -> 2 [label="$[g-zG-Z]"]
+    1 -> 3 [label="$$e"]
+
+    2 -> 2 [label="$[[:alpha:]]"]
+    2 -> 3 [label="$$e"]
+}
