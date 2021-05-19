@@ -7,6 +7,11 @@ import (
 	"strings"
 )
 
+const (
+	errorTokenName = "__ERROR_TOKEN"
+	emptyTokenName = "_EMPTY_TOKEN"
+)
+
 // Automata represents DFA.
 type Automata struct {
 	StartState *State
@@ -72,11 +77,11 @@ func (a *Automata) NextToken() (Token, bool) {
 			a.Cache.Reset()
 
 			if a.ErrorToken {
-				return buildFullToken("__ERROR_TOKEN", tokenData), a.Finished
+				return buildFullToken(errorTokenName, tokenData), a.Finished
 			}
 
 			if strings.TrimSpace(tokenData) == "" {
-				return buildFullToken("__EMPTY_TOKEN", tokenData), a.Finished
+				return buildFullToken(emptyTokenName, tokenData), a.Finished
 			}
 
 			return buildFullToken(currentState.Name, tokenData), a.Finished

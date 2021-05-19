@@ -35,7 +35,7 @@ func (l *Lexer) GetAllTokens() (list []Token, e error) {
 	for !end {
 		token, end = l.Automata.NextToken()
 		// Ignore empty tokens
-		if (token != Token{} && token.Name != "__EMPTY_TOKEN") {
+		if (token != Token{} && token.Name != emptyTokenName) {
 			list = append(list, token)
 		}
 	}

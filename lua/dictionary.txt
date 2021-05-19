@@ -27,6 +27,9 @@ for loop_for
 do loop_do
 until loop_until
 repeat loop_repeat
+break loop_break
+continue loop_continue
+return func_return
 then statement_then
 end statement_end
 not op_not

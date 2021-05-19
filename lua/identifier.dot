@@ -1,4 +1,4 @@
-digraph main {
+digraph identifier {
     1 [peripheries=2]
 
     0 -> 0 [label="$[[:alnum:]\_]"]

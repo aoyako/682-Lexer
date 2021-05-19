@@ -37,11 +37,10 @@ func main() {
 
 	for {
 		AcceptSource(lexer)
-		break
 	}
 }
 
-// AcceptSource asks for file and prints tokens from it.
+// AcceptSource asks for a file and prints tokens from it.
 func AcceptSource(l *Lexer) {
 	fmt.Fscanf(os.Stdin, "%s\n", &source)
 	// source = "test.txt"
