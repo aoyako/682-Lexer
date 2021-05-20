@@ -1,12 +1,13 @@
 digraph main {
     2 [peripheries=2]
+    24 [peripheries=3]
 
-    0 -> string_constant_2 [label="$[\"]"]
-    0 -> string_constant_1 [label="$[\']"]
+    0 -> string_constant_2 [label="$\""]
+    0 -> string_constant_1 [label="$\'"]
     0 -> number_constant [label="$[1-9]"]
     0 -> hex_number_constant [label="0"]
     0 -> init [label="$\="]
-    0 -> identifier [label="$[[:alpha:]\#\@\_]"]
+    0 -> identifier [label="$[[:alpha:]\_]"]
 
     0 -> 1 [label="$\s"]
     1 -> 1 [label="$\s"]
@@ -28,6 +29,7 @@ digraph main {
     8 -> 2 [label="$$e"]
 
     0 -> 9 [label=":"]
+    9 -> tag [label=":"]
     9 -> 2 [label="$$e"]
 
     0 -> 10 [label="."]
@@ -58,4 +60,20 @@ digraph main {
 
     0 -> 17 [label="%"]
     17 -> 2 [label="$$e"]
+
+    0 -> 20 [label="#"]
+    20 -> 2 [label="$$e"]
+
+    0 -> 21 [label="<"]
+    21 -> 2 [label="$$e"]
+    21 -> equals [label="="]
+
+    0 -> 22 [label=">"]
+    22 -> 2 [label="$$e"]
+    22 -> equals [label="="]
+
+    0 -> 23 [label="~"]
+    23 -> equals [label="="]
+    23 -> 24 [label="$[^\=]"]
+    24 -> 2 [label="$$e"]
 }

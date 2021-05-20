@@ -77,6 +77,7 @@ func (a *Automata) NextToken() (Token, bool) {
 			a.Cache.Reset()
 
 			if a.ErrorToken {
+				a.ErrorToken = false
 				return buildFullToken(errorTokenName, tokenData), a.Finished
 			}
 

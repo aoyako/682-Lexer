@@ -49,7 +49,7 @@ If a dictionary mapping is absent for input, token will be named as automata cla
 ## Examples
 You can find examples in the `lua/` folder
 ```
-go run . -c lua/main.dot -t lua/dictionary.txt lua/equals.dot lua/init.dot lua/number_constant.dot lua/string_constant_1.dot lua/string_constant_2.dot lua/identifier.dot lua/commentary.dot lua/hex_number_constant.dot
+go run . -c lua/main.dot -t lua/dictionary.txt lua/equals.dot lua/init.dot lua/number_constant.dot lua/string_constant_1.dot lua/string_constant_2.dot lua/identifier.dot lua/commentary.dot lua/hex_number_constant.dot lua/tag.dot
 ```
 Then, 
 ```

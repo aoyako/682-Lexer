@@ -11,9 +11,5 @@ digraph commentary {
     6 -> 6 [label="$[^\]]"]
     6 -> 7 [label="]"]
     7 -> 6 [label="$[^\]]"]
-    7 -> 8 [label="]"]
-    8 -> 6 [label="$[^\-]"]
-    8 -> 9 [label="-"]
-    9 -> 6 [label="$[^\-]"]
-    9 -> 4 [label="-"]
+    7 -> 4 [label="]"]
 }

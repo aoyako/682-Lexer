@@ -48,5 +48,7 @@ func (l *Lexer) SetInput(input io.Reader) {
 	l.Automata.Reader = bufio.NewReader(input)
 	l.Automata.Finished = false
 	l.Automata.Position = 0
+	l.Automata.ErrorToken = false
+	l.Automata.LastSymbol = 0
 	l.Automata.Cache.Reset()
 }
