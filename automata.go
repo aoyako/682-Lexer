@@ -30,8 +30,15 @@ func (a *Automata) NextToken() (Token, bool) {
 	defer func() {
 		r := recover()
 		if r != nil {
-			panic(fmt.Sprintf("Position %d - cannot process, current cache: %s, state: %s-%d",
-				a.Position, a.Cache.String(), currentState.Name, currentState.ID))
+			var errorMessage string
+			if currentState != nil {
+				errorMessage = fmt.Sprintf("%v. Position %d - cannot process, current cache: %s, state: %s-%d",
+					r, a.Position, a.Cache.String(), currentState.Name, currentState.ID)
+			} else {
+				errorMessage = fmt.Sprintf("%v. Position %d - cannot process, current cache: %s",
+					r, a.Position, a.Cache.String())
+			}
+			panic(errorMessage)
 		}
 	}()
 
@@ -53,13 +60,16 @@ func (a *Automata) NextToken() (Token, bool) {
 			if err == io.EOF {
 				a.Finished = true
 				currentState, _, err = currentState.Move(0)
+				if err != nil {
+					panic("Error accepting EOF symbol: " + err.Error())
+				}
 			} else {
 				panic("Error reading next symbol " + err.Error())
 			}
 		} else {
 			currentState, ok, err = currentState.Move(input)
 			if err != nil {
-				panic("Error accepting next symbol " + err.Error())
+				panic("Error accepting next symbol: " + err.Error())
 			}
 
 			if ok {

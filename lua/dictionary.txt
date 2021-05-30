@@ -1,4 +1,3 @@
-::= op_initialization
 = op_set
 local local_declaration
 require module_load
@@ -18,6 +17,7 @@ require module_load
 .. double_dot
 ... triple_dot
 : double_vertical_dot
+:: double_double_dot
 , punct_comma
 ; punct_dot_comma
 + op_plus

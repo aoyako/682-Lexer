@@ -1,0 +1,8 @@
+digraph multiline_string_1 {
+    2 [peripheries=2]
+
+    0 -> 0 [label="$[^\]]"]
+    0 -> 1 [label="$[\]]"]
+    1 -> 0 [label="$[^\]]"]
+    1 -> 2 [label="$[\]]"]
+}

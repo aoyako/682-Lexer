@@ -23,8 +23,7 @@ func (l *Lexer) GetAllTokens() (list []Token, e error) {
 	defer func() {
 		r := recover()
 		if r != nil {
-			e = fmt.Errorf("error: %s", fmt.Sprintf("Position %d - cannot process, current cache: %s",
-				l.Automata.Position, l.Automata.Cache.String()))
+			e = fmt.Errorf("[%v]", r)
 		}
 	}()
 

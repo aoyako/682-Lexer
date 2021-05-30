@@ -61,7 +61,7 @@ func (s *State) Move(input rune) (*State, bool, error) {
 // match returns true if input matches check string.
 func match(check string, input rune) bool {
 	if len([]rune(check)) < 1 {
-		panic("found bad transition condition")
+		panic("found bad transition condition by " + check + " input " + string(input))
 	}
 
 	// Character comparison
