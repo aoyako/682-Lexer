@@ -79,4 +79,8 @@ in
 ind
 ~=
 1s
+"some ${ important + 1 }$ text is ${ stored() }$ here"
+"${}$"
+"${ a }$ says hello to ${ b }$"
+x = 10
 ~

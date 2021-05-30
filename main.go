@@ -35,15 +35,15 @@ func init() {
 func main() {
 	lexer := NewLexer(initialState)
 
-	// for {
-	AcceptSource(lexer)
-	// }
+	for {
+		AcceptSource(lexer)
+	}
 }
 
 // AcceptSource asks for a file and prints tokens from it.
 func AcceptSource(l *Lexer) {
-	// fmt.Fscanf(os.Stdin, "%s\n", &source)
-	source := "lua/program_sample_0.lua"
+	fmt.Fscanf(os.Stdin, "%s\n", &source)
+	// source := "lua/program_sample_0.lua"
 	file, err := os.Open(source)
 	if err != nil {
 		fmt.Printf("Cannot open file: %s\n", source)

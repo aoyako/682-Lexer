@@ -84,4 +84,6 @@ digraph main {
     25 -> 24 [label="$$e"]
     26 -> multiline_string_2 [label="["]
     26 -> 24 [label="$$e"]
+
+    8 -> middle_inter_str [label="$"]
 }

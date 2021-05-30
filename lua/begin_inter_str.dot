@@ -1,0 +1,5 @@
+digraph begin_inter_str {
+    1 [peripheries=2]
+
+    0 -> 1 [label="$$e"]
+}
