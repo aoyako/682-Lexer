@@ -9,10 +9,12 @@ defg"
 'abc\
 defg'
 [[
-    Multiline string' 1
+    Multiline string'
+    1
 ]]
 [==[
-    Multiline string" 2
+    Multiline string"
+    2
 ]==]
 123
 1.23
@@ -79,7 +81,7 @@ in
 ind
 ~=
 1s
-"some ${ important + 1 }$ text is ${ stored() }$ here"
+"some ${ 'hello', important + 1 }$ text is ${ stored() }$ here"
 "${}$"
 "${ a }$ says hello to ${ b }$"
 x = 10
